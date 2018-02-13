@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<views:BaseView xmlns="http://xamarin.com/schemas/2014/forms"
+                xmlns:views="clr-namespace:PSY.Innovative.Views;assembly=PSY.Innovative"
+                xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                xmlns:innovative="clr-namespace:PSY.Innovative;assembly=PSY.Innovative"
+                xmlns:resources="clr-namespace:PSY.Innovative.Resources;assembly=PSY.Innovative"
+                x:Class="PSY.Innovative.Views.LoginView"  BackgroundColor="White">
+
+  <RelativeLayout  BackgroundColor="White" >
+    <StackLayout   BackgroundColor="{x:Static innovative:Styles.PsyDarkColor}" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"
+      RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=.0,Constant=0}"
+      RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=.0,Constant=0}"
+      RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width,Factor=1,Constant=0}"
+      RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=.35,Constant=0}">
+      <!--<Image HeightRequest="150" WidthRequest="150" Source="Psymbiosys_logo.png" Aspect="AspectFill" HorizontalOptions="CenterAndExpand"   VerticalOptions="CenterAndExpand"/>-->
+    </StackLayout>
+
+    <StackLayout  BackgroundColor="{x:Static innovative:Styles.PsyLightColor}" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"
+     RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=.35,Constant=0}"
+     RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=.0,Constant=0}"
+     RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width,Factor=1,Constant=0}"
+     RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=.1,Constant=0}">
+      <Label Text="Sign In" HorizontalOptions="CenterAndExpand"   VerticalOptions="CenterAndExpand" TextColor="White"/>
+    </StackLayout>
+
+    <StackLayout  BackgroundColor="#fff" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"
+        RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=.45,Constant=0}"
+        RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=.1,Constant=0}"
+        RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width,Factor=.8,Constant=0}"
+        RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=.47,Constant=0}"
+                  Padding="10">
+
+
+      <Entry x:Name="UsernameEntry" Text="{Binding Username, Mode=TwoWay}"  Placeholder="Username" VerticalOptions="CenterAndExpand"  HorizontalOptions="FillAndExpand" />
+      <Entry x:Name="PasswordEntry" Text="{Binding Password, Mode=TwoWay}" Placeholder="Password"  HorizontalOptions="FillAndExpand" IsPassword="true" />
+      <!--<StackLayout Orientation="Horizontal">
+        <Label Text="{x:Static resources:AppResources.RememberMe}" />
+        <Switch  IsToggled="false" HorizontalOptions="EndAndExpand" />
+      </StackLayout >-->
+      <Button x:Name="LoginButton" TextColor="White" BackgroundColor="{x:Static innovative:Styles.PsyDarkColor}" Text="{x:Static resources:AppResources.Login}" VerticalOptions="CenterAndExpand"  HorizontalOptions="FillAndExpand" Command="{Binding LoginClick}"/>
+      <Label x:Name="messageLabel" Text="{Binding Message}" />
+    </StackLayout>
+    <!--<StackLayout  BackgroundColor="#eeeeee" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"
+   RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=.92,Constant=0}"
+   RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=.0,Constant=0}"
+   RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width,Factor=1,Constant=0}"
+   RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=.08,Constant=0}">
+      <Label Text="NOT A MEMBER YET? REGISTER HERE" HorizontalOptions="CenterAndExpand"   VerticalOptions="CenterAndExpand" />
+    </StackLayout>-->
+  </RelativeLayout>
+
+
+</views:BaseView>

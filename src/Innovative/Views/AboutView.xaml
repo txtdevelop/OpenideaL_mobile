@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<views:BaseView xmlns="http://xamarin.com/schemas/2014/forms"
+                 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                xmlns:innovative="clr-namespace:PSY.Innovative;assembly=PSY.Innovative"
+                xmlns:views="clr-namespace:PSY.Innovative.Views;assembly=PSY.Innovative"
+                xmlns:converters="clr-namespace:PSY.Innovative.Converters;assembly=PSY.Innovative"
+                xmlns:local="clr-namespace:PSY.Innovative.Resources;assembly=PSY.Innovative"
+                x:Class="PSY.Innovative.Views.AboutView">
+  <views:BaseView.Resources>
+    <ResourceDictionary>
+      <converters:HtmlSourceConverter x:Key="HtmlSource" />
+    </ResourceDictionary>
+  </views:BaseView.Resources>
+  <Grid RowSpacing="0">
+    <Grid.RowDefinitions>
+      <RowDefinition Height="{x:Static innovative:Styles.ConnectionStatusIndicatorHeight}" />
+      <RowDefinition Height="*" />
+      <RowDefinition Height="40" />
+    </Grid.RowDefinitions>
+    <WebView Grid.Row="1" x:Name="AboutWebView" Source="{Binding AboutPage, Converter={StaticResource HtmlSource}}" />
+    <Grid Grid.Row="2">
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="*" />
+        <ColumnDefinition Width="*"/>
+      </Grid.ColumnDefinitions>
+      <Button Grid.Column="0" Text="{x:Static local:AppResources.Licenses}" HorizontalOptions="Center" Command="{Binding GoToLicensesCommand}"></Button>
+      <Button Grid.Column="1" Text="{x:Static local:AppResources.PrivacyAgreement}" HorizontalOptions="Center" Command="{Binding GoToPrivacyAgreementCommand}"></Button>
+    </Grid>
+  </Grid>
+</views:BaseView>

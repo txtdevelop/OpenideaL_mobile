@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "65830864118",
+    "firebase_url": "https://psymbiosys-innovate.firebaseio.com",
+    "project_id": "psymbiosys-innovate",
+    "storage_bucket": "psymbiosys-innovate.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:65830864118:android:9813b08898945c6a",
+        "android_client_info": {
+          "package_name": "com.psy.innovate"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "65830864118-g70qtr8ndkp3ejcg2u8mf35m8fgrhnoq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.psy.innovate",
+            "certificate_hash": "740e931aff800b9e37aae0bcaab4d3d7d82a4606"
+          }
+        },
+        {
+          "client_id": "65830864118-mpqq23jlv2htgooovts71gm8j74vnoie.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBzclKSUS37KYVInUTaaTALTeXVeuWNvGI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "65830864118-mpqq23jlv2htgooovts71gm8j74vnoie.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

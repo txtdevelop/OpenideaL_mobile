@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<views:BaseView xmlns="http://xamarin.com/schemas/2014/forms"
+                xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                xmlns:innovative="clr-namespace:PSY.Innovative;assembly=PSY.Innovative"
+                xmlns:views="clr-namespace:PSY.Innovative.Views;assembly=PSY.Innovative"
+                xmlns:converters="clr-namespace:PSY.Innovative.Converters;assembly=PSY.Innovative"
+                xmlns:local="clr-namespace:PSY.Innovative.Resources;assembly=PSY.Innovative"
+                x:Class="PSY.Innovative.Views.User.UserVotesView">
+  <ListView BackgroundColor="#ccc"
+            ItemsSource="{Binding Votes}"
+            VerticalOptions="FillAndExpand"
+            HasUnevenRows="true"
+            RefreshCommand="{Binding LoadVotesCommand}"
+            IsPullToRefreshEnabled="true"
+            IsRefreshing="{Binding IsBusy, Mode=OneWay}"
+            CachingStrategy="RecycleElement">
+      <ListView.ItemTemplate>
+          <DataTemplate>
+              <ViewCell>
+                  <StackLayout Padding="10">
+                      <Label Text="{Binding Idea.Title}"
+                             LineBreakMode="NoWrap"
+                             Style="{DynamicResource ListItemTextStyle}"
+                             FontSize="16"/>
+                      <Label Text="{Binding VoteType}"
+                             LineBreakMode="NoWrap"
+                             Style="{DynamicResource ListItemDetailTextStyle}"
+                             FontSize="13"/>
+                  </StackLayout>
+              </ViewCell>
+          </DataTemplate>
+      </ListView.ItemTemplate>
+  </ListView>
+</views:BaseView>

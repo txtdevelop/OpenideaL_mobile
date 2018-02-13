@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<views:BaseView xmlns="http://xamarin.com/schemas/2014/forms"
+                xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                xmlns:listItem="clr-namespace:PSY.Innovative.Controls.ListItem;assembly=PSY.Innovative"
+                 xmlns:innovative="clr-namespace:PSY.Innovative;assembly=PSY.Innovative"
+                 xmlns:views="clr-namespace:PSY.Innovative.Views;assembly=PSY.Innovative"
+                 xmlns:resources="clr-namespace:PSY.Innovative.Resources;assembly=PSY.Innovative"
+                 x:Class="PSY.Innovative.Views.AgreementView">
+  <views:BaseView.Resources>
+    <ResourceDictionary>
+      <Style TargetType="listItem:ListItemView">
+        <Setter Property="BackgroundColor" Value="White" />
+      </Style>
+    </ResourceDictionary>
+  </views:BaseView.Resources>
+  <Grid RowSpacing="0">
+    <Grid.RowDefinitions>
+      <RowDefinition Height="{x:Static innovative:Styles.ConnectionStatusIndicatorHeight}" />
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="*" />
+    </Grid.RowDefinitions>
+
+    <StackLayout Grid.Row="1" Orientation="Vertical" Spacing="0">
+      <listItem:ListItemView Title="{x:Static resources:AppResources.PrivacyAgreement}" IsSelectable="False"
+                          ClickItemCommand="{Binding PrivacyPolicyCommand}" HasArrow="true"
+                          Description="{x:Static resources:AppResources.PrivacyAgreementDescription}">
+      </listItem:ListItemView>
+      <listItem:ListItemView Title="{x:Static resources:AppResources.TermsOfUse}" IsSelectable="False"
+                          ClickItemCommand="{Binding TermsOfUseCommand}"
+                          Description="{x:Static resources:AppResources.TermsOfUseDescription}" HasSeparator="False" HasArrow="true">
+      </listItem:ListItemView>
+    </StackLayout>
+
+    <StackLayout Grid.Row="2" Orientation="Vertical" VerticalOptions="End" Spacing="0">
+      <Button Text="{x:Static resources:AppResources.IReadAndAgreed}" Command="{Binding IAcceptCommand}"></Button>
+    </StackLayout>
+
+  </Grid>
+</views:BaseView>

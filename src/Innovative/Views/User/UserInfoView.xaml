@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<views:BaseView xmlns="http://xamarin.com/schemas/2014/forms"
+                xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                xmlns:views="clr-namespace:PSY.Innovative.Views;assembly=PSY.Innovative"
+                xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin.Abstractions"
+                xmlns:resources="clr-namespace:PSY.Innovative.Resources;assembly=PSY.Innovative"
+                xmlns:innovative="clr-namespace:PSY.Innovative;assembly=PSY.Innovative"
+                x:Class="PSY.Innovative.Views.User.UserInfoView">
+
+    <ScrollView>
+        <RelativeLayout>
+            <BoxView Color="{x:Static innovative:Styles.PsyDarkColor}" HeightRequest="100"
+                     RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}" />
+            <Button BorderRadius="80" x:Name="imageCircleBack"
+                    BackgroundColor="White" HeightRequest="160" WidthRequest="160" 
+                    RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=.5, Constant = -80}" 
+                    RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Factor=0, Property=Y, Constant=20}" />
+            
+            <controls:CircleImage HeightRequest="140" WidthRequest="140" 
+                   Source="{Binding User.ProfileImage}" Aspect="AspectFill"
+                   RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToView, ElementName=imageCircleBack, Property=X, Factor=1,Constant=10}" 
+                   RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Factor=0, Property=Y, Constant=30}" />
+            <Label Text="{Binding User.Name}" FontAttributes="Bold" FontSize="26"
+                   HorizontalTextAlignment="Center"
+                   RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Y, Factor=0, Constant=170}" 
+                   RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}" />
+
+            <Label FontSize="19" Text="{Binding User.Mail}"
+                   HorizontalTextAlignment="Center"
+                   RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Y, Factor=0,Constant=220}"
+                   RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}" />
+
+          <Label FontSize="19" Text="{Binding User.Address}"
+                   HorizontalTextAlignment="Center"
+                    RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Y, Factor=0,Constant=250}"
+                    RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}" />
+
+          <Label FontSize="19" Text="{Binding User.NumberOfIdeas, StringFormat='\{0\} Ideas'}"
+                   HorizontalTextAlignment="Center"
+                    RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Y, Factor=0,Constant=280}"
+                    RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}" />
+
+          <Label FontSize="19" Text="{Binding User.NumberOfPoints, StringFormat='\{0\} Points'}"
+                   HorizontalTextAlignment="Center"
+                    RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Y, Factor=0,Constant=310}"
+                    RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}" />
+
+        </RelativeLayout>
+    </ScrollView>
+
+        <!--<Grid RowSpacing="0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20" />
+            <RowDefinition Height="300"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <StackLayout Grid.Row="0" Grid.Column="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            <Label  HorizontalTextAlignment="Center" VerticalOptions="Start"  HorizontalOptions="CenterAndExpand"  Text=""/>
+        </StackLayout>
+        <Image  Grid.Row="1"   Grid.Column="0"  HorizontalOptions="Center" HeightRequest="300" WidthRequest="300" VerticalOptions="FillAndExpand"  Source="{Binding User.ProfileImage}"  Aspect="AspectFit"/>
+        <StackLayout Grid.Row="2" Grid.Column="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            <Grid RowSpacing="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="20"/>
+                    <RowDefinition Height="20"/>
+                    <RowDefinition Height="20"/>
+                    <RowDefinition Height="20"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="40"/>
+                    <ColumnDefinition Width="100"/>
+                </Grid.ColumnDefinitions>
+                <Label Grid.Row="0" Grid.Column="0" HorizontalOptions="CenterAndExpand"  Text="FirstName"/>
+                <Label Grid.Row="0" Grid.Column="1" HorizontalOptions="CenterAndExpand"  Text="{Binding User.FirstName}"/>
+                <Label Grid.Row="1" Grid.Column="0" HorizontalOptions="CenterAndExpand"  Text="LastName"/>
+                <Label Grid.Row="1" Grid.Column="1" HorizontalOptions="CenterAndExpand"  Text="{Binding User.LastName}"/>
+                <Label Grid.Row="2" Grid.Column="0" HorizontalOptions="CenterAndExpand"  Text="Address"/>
+                <Label Grid.Row="2" Grid.Column="1" HorizontalOptions="CenterAndExpand"  Text="{Binding User.Address}"/>
+                <Label Grid.Row="3" Grid.Column="0" HorizontalOptions="CenterAndExpand"  Text="NumberOfIdeas"/>
+                <Label Grid.Row="3" Grid.Column="1" HorizontalOptions="CenterAndExpand"  Text="{Binding User.NumberOfIdeas}"/>
+            </Grid>
+        </StackLayout>
+    </Grid>-->
+
+</views:BaseView>

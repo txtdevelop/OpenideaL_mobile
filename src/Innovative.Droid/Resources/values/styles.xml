@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<resources>
+  <!--used for android 4.x -->
+  <style name="PsyTheme" parent="PsyTheme.Base">
+<!--    <item name="android:colorActivatedHighlight">@color/ColorActivatedHighlight</item>-->
+    <item name="colorButtonNormal">@color/ColorButtonNormal</item>
+    <item name="buttonStyle">@style/AppCompatButtonStyle</item>
+
+    <!-- button on press highlight-->
+    <item name="colorControlHighlight">@color/ColorButtonHighlight</item>
+  </style>
+
+    <style name="Theme.Splash" parent="android:Theme">
+      <item name="android:windowBackground">@drawable/splash</item>
+      <item name="android:windowNoTitle">true</item>
+    </style>
+  
+  <!-- Base theme applied no matter what API -->
+  <style name="PsyTheme.Base" parent="Theme.AppCompat.Light">
+    <!--If you are using revision 22.1 please use just windowNoTitle. Without android:-->
+    <item name="windowNoTitle">true</item>
+    <!--We will be using the toolbar so no need to show ActionBar-->
+    <item name="windowActionBar">false</item>
+
+    <!-- Set theme colors from http://www.google.com/design/spec/style/color.html#color-color-palette-->
+
+    <!-- colorPrimary is used for the default action bar background -->
+    <item name="colorPrimary">@color/ColorPrimary</item>
+    <!-- colorPrimaryDark is used for the status bar (orange:#FE6F0E)#2196F3-->
+    <item name="colorPrimaryDark">@color/ColorPrimaryDark</item>
+
+    <item name="android:divider">#FFFFFF</item>
+
+    <!-- colorAccent is used as the default value for colorControlActivated
+         which is used to tint widgets FF4081-->
+    <item name="colorAccent">@color/ColorAccent</item>
+
+    <item name="colorControlNormal">@color/ColorControlNormal</item>
+
+    <!-- You can also set colorControlNormal, colorControlActivated
+         colorControlHighlight and colorSwitchThumbNormal. -->
+
+
+    <item name="windowActionModeOverlay">true</item>
+
+    <item name="alertDialogTheme">@style/AppCompatDialogStyle</item>
+
+    <item name="android:colorLongPressedHighlight">@color/ListViewHighlighted</item>
+    <item name="android:windowBackground">@color/ColorPrimary</item>
+
+  </style>
+
+  <style name="AppCompatDialogStyle" parent="Theme.AppCompat.Light.Dialog">
+    <item name="colorAccent">@color/OsramColor</item>
+    <item name="colorControlNormal">@color/ColorControlNormal</item>
+
+    <!-- Used for the title and text -->
+    <!--<item name="android:textColorPrimary">#FFFFFF</item>-->
+    <!--<item name="android:windowTitleStyle">@style/AppCompatDialogTitleStyle</item>-->
+  </style>
+
+  <style name="ActionBarTheme" parent="Widget.AppCompat.Toolbar">
+    <item name="android:textColorPrimary">@color/white</item>
+    <item name="selectableItemBackground">@color/ColorPrimaryDark</item>
+    <item name="selectableItemBackgroundBorderless">@color/ColorPrimaryDark</item>
+    <item name="colorControlHighlight">@color/ColorPrimaryDark</item>
+  </style>
+
+
+  
+
+  <!--<style name="AppCompatDialogTitleStyle">
+    <item name="android:textColor">@color/OsramColor</item>
+    <item name="android:textAppearance">@style/TextAppearance.AppCompat.Title</item>
+  </style>-->
+
+  <style name="AppCompatButtonStyle" parent="Widget.AppCompat.Button.Borderless">
+    <item name="android:textColor">@color/ButtonTextColor</item>
+    <item name="colorButtonNormal">#000</item>
+    <item name="android:colorButtonNormal">#000</item>
+  </style>
+
+  <style name="AppCompatToolbarTheme" parent="ThemeOverlay.AppCompat.ActionBar">
+    <item name="android:textColorPrimary">@color/ToolbarTextColorPrimary</item>
+    <item name="android:textColor">@color/ToolbarTextColor</item>
+    <item name="colorControlNormal">@color/ToolBarButtonColor</item>
+  </style>
+</resources>

@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+  <color name="OsramColor">#41B659</color>
+  <color name="ColorButtonNormal">#41B659</color>
+
+  <!--only for android 4.x-->
+  <color name="ColorButtonHighlight">#099225</color>
+
+  <color name="SliderTextColor">#4A4A4A</color>
+
+  <!--<color name="OsramColor">#E95B0D</color>-->
+
+
+  <color name="TabIndicatorColor">#4A4A4A</color>
+
+  <color name="ColorActivatedHighlight">@android:color/transparent</color>
+
+
+  <!-- colorPrimaryDark is used for the status bar (orange:#FE6F0E)#2196F3
+       Used for the main toolbar-->
+  <color name="ColorPrimaryDark">#099225</color>
+
+  <!-- colorPrimary is used for the default action bar background
+       Used the bar under the main tool bar.-->
+  <color name="ColorPrimary">#41B659</color>
+
+  <!-- plus button -->
+  <color name="ColorAccent">#41B659</color>
+  <color name="white">#FFFFFF</color>
+
+  <color name="OsramColorAlpha">#77E95B0D</color>
+
+  <color name="ColorControlNormal">#4A4A4A</color>
+
+  <!--AppCompatButtonStyle. Used for the text of the button-->
+  <color name="ButtonTextColor">#FFFFFF</color>
+
+  <!--AppCompatToolbarTheme. Used for: the text of the Tab, Wait #212121 wheel -->
+  <color name="ToolbarTextColorPrimary">#FFFFFF</color>
+  <color name="ToolbarTextColor">#FFFFFF</color>
+
+
+  <!--AppCompatToolbarTheme.  burgermenu and arrows 007CFF -->
+  <color name="ToolBarButtonColor">#FFFFFF</color>
+
+  <color name="ListViewHighlighted">#D3D3D3</color>
+</resources>

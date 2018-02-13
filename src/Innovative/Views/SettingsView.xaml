@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<views:BaseView xmlns="http://xamarin.com/schemas/2014/forms"
+                xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                xmlns:listItem="clr-namespace:PSY.Innovative.Controls.ListItem;assembly=PSY.Innovative"
+                xmlns:innovative="clr-namespace:PSY.Innovative;assembly=PSY.Innovative"
+                xmlns:views="clr-namespace:PSY.Innovative.Views;assembly=PSY.Innovative"
+                xmlns:listItem1="clr-namespace:PSY.Innovative.Controls.ListItem;assembly=PSY.Innovative"
+                x:Class="PSY.Innovative.Views.SettingsView">
+  <views:BaseView.Resources>
+    <ResourceDictionary>
+      <Style TargetType="listItem:ListItemView">
+        <Setter Property="BackgroundColor" Value="White" />
+      </Style>
+    </ResourceDictionary>
+  </views:BaseView.Resources>
+  <Grid RowSpacing="0">
+    <Grid.RowDefinitions>
+      <RowDefinition Height="{x:Static innovative:Styles.ConnectionStatusIndicatorHeight}" />
+      <RowDefinition Height="*"/>
+    </Grid.RowDefinitions>
+    <ScrollView Grid.Row="1">
+      <StackLayout Spacing="0">
+        <listItem1:ListItemView  Title="{Binding LanguageTxt}" IsSelectable="False"
+                            IconImage="languages.png" ClickItemCommand="{Binding OpenLanguageViewCommand}" HasArrow="true">
+          <listItem1:ListItemView.ParameterView>
+            <StackLayout HorizontalOptions="End" Orientation="Horizontal">
+              <Label Text="{Binding LanguageName}" VerticalOptions="Center" HorizontalTextAlignment="Center" />
+              <Image Source="{Binding Flag}" VerticalOptions="Center"></Image>
+            </StackLayout>
+          </listItem1:ListItemView.ParameterView>
+        </listItem1:ListItemView>
+        <listItem1:ListItemView Title="{Binding AboutTxt}" IsSelectable="False"
+                                    IconImage="about.png" ClickItemCommand="{Binding OpenAboutCommand}" HasArrow="True">
+        </listItem1:ListItemView>
+      </StackLayout>
+    </ScrollView>
+  </Grid>
+</views:BaseView>

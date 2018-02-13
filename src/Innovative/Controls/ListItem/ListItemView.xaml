@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Grid xmlns="http://xamarin.com/schemas/2014/forms"
+                     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                     xmlns:innovative="clr-namespace:PSY.Innovative;assembly=PSY.Innovative"
+                     x:Class="PSY.Innovative.Controls.ListItem.ListItemView"
+					           RowSpacing="0"  ColumnSpacing="0">
+
+  <Grid.ColumnDefinitions>
+    <ColumnDefinition Width="Auto"></ColumnDefinition>
+    <ColumnDefinition Width="*"></ColumnDefinition>
+    <ColumnDefinition Width="Auto"></ColumnDefinition>
+  </Grid.ColumnDefinitions>
+  <Grid.RowDefinitions>
+    <RowDefinition Height="Auto"></RowDefinition>
+    <RowDefinition Height="Auto"></RowDefinition>
+  </Grid.RowDefinitions>
+  <ContentView x:Name="IconContentView" Grid.Row="0" Grid.Column="0" VerticalOptions="Center" HorizontalOptions="Center" HeightRequest="60" Margin="10,0,0,0" >
+    <Image x:Name="Icon" VerticalOptions="Center" HorizontalOptions="End" IsVisible ="false"/>
+  </ContentView>
+
+  <Grid x:Name="ItemGrid" Grid.Row="0" Grid.Column="1" VerticalOptions="Center" RowSpacing="0" Margin="10,5,5,5">
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="Auto"/>
+      <ColumnDefinition Width="*"/>
+      <ColumnDefinition Width="Auto"/>
+    </Grid.ColumnDefinitions>
+    <Grid.RowDefinitions>
+      <RowDefinition Height="Auto"/>
+      <RowDefinition Height="Auto"/>
+    </Grid.RowDefinitions>
+    <Label x:Name="TitleLabel" Grid.Row="0" Grid.Column="0" TextColor="{x:Static innovative:Styles.MainDarkTextColor}" FontSize="15" HorizontalOptions="Start" VerticalTextAlignment="Center"/>
+    <Label x:Name="DescriptionLabel" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" TextColor="{x:Static innovative:Styles.SecondaryDarkTextColor}" FontSize="12" />
+  </Grid>
+
+  <Image x:Name="ArrowImage" Grid.Row="0" Grid.Column="2" Source="arrow_right.png" HorizontalOptions="End"  VerticalOptions="Center" WidthRequest="15" Margin="5,0,5,0" IsVisible="false" />
+   
+
+  <!--<BoxView x:Name="Separator" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" HeightRequest="1" BackgroundColor="Silver"></BoxView>-->
+</Grid>

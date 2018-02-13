@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<resources>
+  <!--used for android >= 5.x-->
+  <style name="PsyTheme" parent="PsyTheme.Base">
+    <item name="android:colorActivatedHighlight">@color/ColorActivatedHighlight</item>
+    <item name="android:colorButtonNormal">@color/ColorButtonNormal</item>
+    <item name="android:buttonStyle">@style/AppCompatButtonStyle</item>
+  </style>
+</resources>
